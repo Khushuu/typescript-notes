@@ -1,0 +1,105 @@
+
+### Javascript 
+
+- also known as ECMAScript
+- started as simple scripting language for browsers
+- run anywhere nature of JS - good choice for cross-platform development
+
+----------------------------------------------------------------------------------------------------------------
+### Typescript
+
+- TypeScript is JavaScript’s runtime with a compile-time type checker
+
+- the goal of TypeScript is to be a static typechecker for JavaScript programs 
+- a tool that runs before your code runs (static) and 
+- ensures that the types of the program are correct(typechecked)
+
+1. Static Type Checker
+
+- static checking: 
+	- detecting errors in code without running
+	- determing an error or not based on kind of values being operated on
+Eg: 
+
+const obj = { width: 10, height: 15 };
+const area = obj.width * obj.heigth;
+Property 'heigth' does not exist on type '{ width: number; height: number; }'. Did you mean 'height'?
+
+----------------------------------------------------------------------------------------------------------------
+
+2. A Typed Superset of Javascript
+
+- TS is a language that is superset of JS
+- Any JS code will run in TS file
+- JS syntax is legal in TS 	
+	- Syntax: way we write text to form a program 
+	
+Eg: Syntax error 
+
+let a = (4
+')' expected.
+
+- TS adds rules about how different kinds of values can be used 
+
+----------------------------------------------------------------------------------------------------------------
+
+3. TS preserves the runtime behaviour of JS 
+
+- Keeping the same runtime behavior as JS is a foundational promise of TS
+- if you move code from JS to TS, it is guaranteed to run the same way, even if TS thinks that the code has type errors
+- TS never changes the runtime behavior of JS code
+
+Eg:
+- dividing by zero in JS produces Infinity instead of throwing a runtime exception
+- works same way in TS
+
+
+----------------------------------------------------------------------------------------------------------------
+
+4. Erased Types 
+
+- when TS compiler is done with checking the code, it erases the types to produce the resulting “compiled” code
+- once the code is compiled, the resulting plain JS code has no type information
+
+- TS never changes the behavior of your program based on the types it inferred
+- while you might see type errors during compilation, the type system itself has no bearing on how your program works when it runs
+
+- TS doesn’t provide any additional runtime libraries
+- programs will use the same standard library (or external libraries) as JS programs
+
+----------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------
+NOTE: JavaScript in Visual Studio Code, and had editor auto-completion. Visual Studio Code uses TypeScript under the hood to make it easier to work with JavaScript.
+-----------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------
+### Installing TypeScript 
+
+Two ways to add TS to project 
+
+- using npm (node package manager) ==> npm install -g typescript
+- installing TS Visual Studio plugin 
+
+-----------------------------------------------------------------------------------------------------------------
+### Building your first TS file 
+
+- add JS code in greeter.ts file 
+
+-----------------------------------------------------------------------------------------------------------------
+### Compiling Code 
+
+Command ==> tsc greeter.ts
+Result:  result will be a file greeter.js which contains the same JavaScript that you fed in
+
+Errors:
+
+- although there were errors, the greeter.js file is still created
+- can use TS even if there are errors in your code
+- but in this case, TS is warning that your code will likely not run as expected
+
+
+
+
+
+
